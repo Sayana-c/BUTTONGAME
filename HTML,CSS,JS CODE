@@ -1,0 +1,98 @@
+<!HTML,CSS CODE>
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> buttongame</title>
+        <style>
+            .box{
+                border: 0px;
+                width:400px;
+                height: 500px;
+                position:absolute;
+                top:20%;
+                left:50%;
+                color: blue;
+                vertical-align:middle;
+                display:flex;
+               align-items: center;               ;
+
+            }
+            .minus{
+                background-color: rgb(109, 109, 109);
+                color: rgb(255, 255, 255);
+                border: brown;
+                display: inline-block;
+                vertical-align:middle;
+                margin-right: 3px;
+                margin-bottom: 3px;
+                width: 70px;
+                height: 30px;
+                border: width 3px;
+            }
+            .add1{
+                background-color: rgb(109, 109, 109);
+                color: rgb(255, 255, 255);
+                border: brown;
+                display: inline-block;
+                vertical-align:middle;
+                margin-right: 3px;
+                margin-bottom: 3px;
+                width: 70px;
+                height: 30px;
+                border: width 3px;
+            }
+            .num{
+                background-color:indigo;
+                color: rgb(255, 255, 255);
+                border: brown;
+                display: inline-block;
+                vertical-align:middle;
+                margin-right: 3px;
+                margin-bottom: 3px;
+                width: 70px;
+                height: 30px;
+                border: width 3px;
+            }
+            .minus:active{background-color: aliceblue;
+            opacity: 0.8,color:black;}
+            .add1:active{background-color: aliceblue;
+            opacity: 0.8,color:black;}
+            .tt{
+                font-size: larger;
+                background-color:dimgray;
+                color: black;
+                text-align:center;
+                font-display:inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="tt">BUTTON GAME</p>
+        <div class="box">
+        <button class="minus">-</button>
+        <button class="num">01</button>
+        <button class="add1">+</button>
+        </div>
+    <script src="buttonGame.js"></script>
+
+    </body>
+</html>
+
+//JS CODE
+const add1= document.querySelector(".add1"),
+    minus= document.querySelector(".minus"),
+     num= document.querySelector(".num");
+let a=1;
+    add1.addEventListener("click", ()=> {
+    a++;
+    a=(a<10)?"0"+a:a;
+    num.innerText=a;
+    console.log(a);
+     });
+    minus.addEventListener("click", ()=> {
+    a--;
+    a=(a<10)?"0"+a:a;
+    num.innerText=a;
+    console.log(a);
+    num});
